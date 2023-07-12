@@ -5,19 +5,19 @@ type TagVariant = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'span' | 'p'
 type WeightVariant = 'regular' | 'medium' | 'bold'
 
 type ColorVariant =
-  | 'orange-default'
-  | 'neutral-inverted'
-  | 'neutral-weak'
-  | 'neutral-default'
-  | 'neutral-strong'
+  | 'orangeDefault'
+  | 'neutralInverted'
+  | 'neutralWeak'
+  | 'neutralDefault'
+  | 'neutralStrong'
 
 type SizeVariant =
-  | 'heading-sm'
-  | 'heading-md'
-  | 'heading-lg'
-  | 'body-sm'
-  | 'body-md'
-  | 'body-lg'
+  | 'headingSm'
+  | 'headingMd'
+  | 'headingLg'
+  | 'bodySm'
+  | 'bodyMd'
+  | 'bodyLg'
 
 type TypographyProps = {
   tag?: TagVariant

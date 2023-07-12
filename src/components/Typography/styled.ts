@@ -1,7 +1,13 @@
 import { createElement } from 'react'
 
 import styled, { DefaultTheme, css } from 'styled-components'
-import { DynamicTypographyProps, TagVariant, WeightVariant } from './types'
+import {
+  ColorVariant,
+  DynamicTypographyProps,
+  SizeVariant,
+  TagVariant,
+  WeightVariant
+} from './types'
 
 const variantStyles = (theme: DefaultTheme, variant: TagVariant) =>
   ({
@@ -26,12 +32,55 @@ const variantWeight = (theme: DefaultTheme, variant: WeightVariant) =>
     `
   })[variant]
 
+const variantColor = (theme: DefaultTheme, variant: ColorVariant) =>
+  ({
+    orangeDefault: css`
+      color: ${theme.color.text.orange.default};
+    `,
+    neutralInverted: css`
+      color: ${theme.color.text.neutral.inverted};
+    `,
+    neutralWeak: css`
+      color: ${theme.color.text.neutral.weak};
+    `,
+    neutralDefault: css`
+      color: ${theme.color.text.neutral.default};
+    `,
+    neutralStrong: css`
+      color: ${theme.color.text.neutral.strong};
+    `
+  })[variant]
+
+const variantSize = (theme: DefaultTheme, variant: SizeVariant) =>
+  ({
+    headingSm: css`
+      font-size: ${theme.font.size.m6};
+    `,
+    headingMd: css`
+      font-size: ${theme.font.size.m7};
+    `,
+    headingLg: css`
+      /* font-size: ${theme.font.size.m7}; */
+    `,
+    bodySm: css`
+      font-size: ${theme.font.size.m2};
+    `,
+    bodyMd: css`
+      font-size: ${theme.font.size.m3};
+    `,
+    bodyLg: css`
+      font-size: ${theme.font.size.base};
+    `
+  })[variant]
+
 export const DynamicTypography = styled(
   ({ tag, children, ...props }: DynamicTypographyProps) =>
     createElement(tag, props, children)
 )`
-  ${({ theme, tag, weight }) => css`
+  ${({ theme, tag, weight, color, size }) => css`
     ${variantStyles(theme, tag)};
     ${variantWeight(theme, weight)};
+    ${variantColor(theme, color)};
+    ${size && variantSize(theme, size)};
   `};
 `
