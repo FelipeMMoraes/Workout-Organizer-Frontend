@@ -18,6 +18,7 @@ type SizeVariant =
   | 'bodySm'
   | 'bodyMd'
   | 'bodyLg'
+  | 'base'
 
 type TypographyProps = {
   tag?: TagVariant

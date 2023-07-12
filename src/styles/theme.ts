@@ -70,18 +70,16 @@ const theme = {
       }
     },
     border: {
-      neutral: {
-        default: 'transparent',
-        weak: '#CBD5E1'
-      }
+      default: 'transparent',
+      weak: '#CBD5E1'
     }
   },
   font: {
     family: {
-      display: "'Satoshi', sans-serif",
-      heading: "'Satoshi', sans-serif",
-      body: "'Satoshi', sans-serif",
-      caption: "'Satoshi', sans-serif"
+      display: "'Manrope', sans-serif",
+      heading: "'Manrope', sans-serif",
+      body: "'Manrope', sans-serif",
+      caption: "'Manrope', sans-serif"
     },
     spacing: {
       tighty: '-0.06em',

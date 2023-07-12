@@ -63,12 +63,15 @@ const variantSize = (theme: DefaultTheme, variant: SizeVariant) =>
       /* font-size: ${theme.font.size.m7}; */
     `,
     bodySm: css`
-      font-size: ${theme.font.size.m2};
+      font-size: ${theme.font.size.m1};
     `,
     bodyMd: css`
-      font-size: ${theme.font.size.m3};
+      font-size: ${theme.font.size.m2};
     `,
     bodyLg: css`
+      font-size: ${theme.font.size.m3};
+    `,
+    base: css`
       font-size: ${theme.font.size.base};
     `
   })[variant]

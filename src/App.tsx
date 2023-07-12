@@ -1,11 +1,9 @@
-import { Typography } from './components/Typography'
+import { Header } from './components/Header'
 
 function App() {
   return (
     <>
-      <Typography tag="h1" weight="bold" color="orangeDefault" size="headingMd">
-        Hello World
-      </Typography>
+      <Header></Header>
     </>
   )
 }
