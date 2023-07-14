@@ -1,14 +1,9 @@
-import { FaBell, FaGear } from 'react-icons/fa6'
-
 import { Typography } from '../Typography'
-
 import * as S from './styled'
 
-type HeaderProps = {}
-
-const Header = ({}: HeaderProps) => (
-  <S.header>
-    <div className="left">
+const Header = () => (
+  <S.Container>
+    <S.Left className="left">
       <Typography
         tag="span"
         color="neutralDefault"
@@ -20,23 +15,27 @@ const Header = ({}: HeaderProps) => (
       <Typography tag="span" color="neutralDefault" size="base" weight="bold">
         Welcome Back!
       </Typography>
-    </div>
+    </S.Left>
 
-    <div className="right">
+    <S.Right>
       <S.SearchBar></S.SearchBar>
-      <div className="iconsHeader">
-        <a href="#">
-          <FaBell size={24} />
-        </a>
-        <a href="#">
-          <FaGear size={24} />
-        </a>
-        <S.Avatar>
-          <img src="https://github.com/FelipeMMoraes.png" alt="" />
-        </S.Avatar>
-      </div>
-    </div>
-  </S.header>
+
+      <S.IconsHeader>
+        <button>
+          <S.FaBellCustom size={24} />
+        </button>
+
+        <button>
+          <S.FaGearCustom size={24} />
+        </button>
+
+        <S.Avatar
+          src="https://github.com/FelipeMMoraes.png"
+          alt="Foto Perfil"
+        />
+      </S.IconsHeader>
+    </S.Right>
+  </S.Container>
 )
 
 export { Header }

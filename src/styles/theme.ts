@@ -42,7 +42,7 @@ const theme = {
       neutral: {
         primary: '#FFFFFF',
         secondary: '#F8FAFB',
-        terciary: '#64748B',
+        tertiary: '#64748B',
         quaternary: '#475569'
       },
       orange: {
@@ -86,7 +86,7 @@ const theme = {
       tight: '-0.04em',
       cozy: '0',
       roomy: '0.02em',
-      spatious: '0.04em'
+      spacious: '0.04em'
     },
     lineHeight: {
       large: '1.6',

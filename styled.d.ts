@@ -73,10 +73,8 @@ declare module 'styled-components' {
         }
       }
       border: {
-        neutral: {
-          default: string
-          weak: string
-        }
+        default: string
+        weak: string
       }
     }
     font: {

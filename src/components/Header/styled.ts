@@ -1,7 +1,9 @@
+import { Container } from 'react-dom'
+import { FaBell, FaGear } from 'react-icons/fa6'
 import styled from 'styled-components'
 import { theme } from '../../styles/theme'
 
-const header = styled.header`
+const Container = styled.header`
   background-color: ${theme.color.background.neutral.primary};
   padding: 24px 32px;
   display: flex;
@@ -10,35 +12,61 @@ const header = styled.header`
   border-bottom: ${theme.border.width.thin} ${theme.border.style.solid};
   border-color: ${theme.color.border.weak};
 
-  .left {
-    display: flex;
-    flex-direction: column;
-  }
+  grid-area: header;
+`
 
-  .rigth {
-  }
+const Left = styled.div`
+  display: flex;
+  flex-direction: column;
+`
 
-  .iconsHeader {
-    align-items: center;
-    display: flex;
-    gap: 1rem;
+const FaBellCustom = styled(FaBell)`
+  color: ${theme.color.background.neutral.tertiary};
+  transition: 0.3s;
 
-    svg {
-      color: ${theme.color.background.neutral.terciary};
-    }
+  &:hover {
+    color: ${theme.color.background.orange.secondary};
   }
 `
 
-const Avatar = styled.div`
-  img {
-    width: 40px;
-    border-radius: ${theme.border.radius.circle};
-    border-color: ${theme.color.background.orange.secondary};
-    border-width: 3px;
-    border-style: solid;
+const FaGearCustom = styled(FaGear)`
+  color: ${theme.color.background.neutral.tertiary};
+  transition: 0.3s;
+
+  &:hover {
+    color: ${theme.color.background.orange.secondary};
   }
+`
+
+const Right = styled.div``
+
+const IconsHeader = styled.div`
+  align-items: center;
+  display: flex;
+  gap: 1rem;
+
+  button {
+    cursor: pointer;
+  }
+`
+
+const Avatar = styled.img`
+  width: 40px;
+  border-radius: ${theme.border.radius.circle};
+  border-color: ${theme.color.background.orange.secondary};
+  border-width: 3px;
+  border-style: solid;
 `
 
 const SearchBar = styled.div``
 
-export { Avatar, SearchBar, header }
+export {
+  Avatar,
+  Container,
+  FaBellCustom,
+  FaGearCustom,
+  IconsHeader,
+  Left,
+  Right,
+  SearchBar
+}
