@@ -9,6 +9,10 @@ const Container = styled.div`
 
   border-right: ${theme.border.width.thin} ${theme.border.style.solid};
   border-color: ${theme.color.border.weak};
+
+  position: fixed;
+  left: 0;
+  top: 0;
 `
 
 const LineBelow = styled.div`
@@ -24,7 +28,7 @@ const LineBelow = styled.div`
 `
 const ContainerLogo = styled.div`
   position: relative;
-  padding-bottom: 29px;
+  padding-bottom: 30px;
 `
 
 const ContainerButtons = styled.div`

@@ -5,8 +5,13 @@ import { theme } from './theme'
 const GlobalStyle = createGlobalStyle`
   ${normalize}
 
-  body { 
+  * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
+  }
+
+  body { 
     font-family: 'Manrope', sans-serif;
     background-color: ${theme.color.background.neutral.secondary} ;
     -webkit-font-smoothing: antialiased;

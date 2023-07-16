@@ -8,16 +8,6 @@ const Container = styled.body`
   grid-template-areas:
     'sideBar header'
     'sideBar main';
-
-  .aside {
-    grid-area: sideBar;
-  }
-  .main {
-    grid-area: main;
-  }
-  .header {
-    grid-area: header;
-  }
 `
 
 export { Container }

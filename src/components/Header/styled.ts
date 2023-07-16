@@ -13,6 +13,10 @@ const Container = styled.header`
   border-color: ${theme.color.border.weak};
 
   grid-area: header;
+
+  position: fixed;
+  right: 0;
+  width: calc(100vw - 230px);
 `
 
 const Left = styled.div`
