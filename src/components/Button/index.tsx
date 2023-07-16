@@ -1,15 +1,18 @@
-import { ReactNode } from 'react'
 import * as S from './styled'
 
-type ButtonProps = {
-  children: ReactNode
-  isActive?: boolean
-}
+import type { ButtonProps } from './types'
 
-const Button: React.FC<ButtonProps> = ({ children, isActive = false }) => {
+const Button: React.FC<ButtonProps> = ({
+  children,
+  isActive = false,
+  icon: Icon
+}) => {
   return (
     <S.NavbarLinkContainer>
-      <S.NavbarLink isActive={isActive}>{children}</S.NavbarLink>
+      <S.NavbarLink isActive={isActive}>
+        {Icon && <Icon size={24} />}
+        {children}
+      </S.NavbarLink>
     </S.NavbarLinkContainer>
   )
 }

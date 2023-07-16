@@ -8,10 +8,14 @@ type NavbarLinkProps = {
 const NavbarLinkContainer = styled.div``
 
 const NavbarLink = styled.button<NavbarLinkProps>`
+  display: flex;
+  gap: 16px;
+  align-items: center;
+
   width: 100%;
 
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 600;
 
   padding: 16px;
   border-radius: 8px;
