@@ -1,15 +1,7 @@
 import { createGlobalStyle } from 'styled-components'
-import { normalize } from 'styled-normalize'
-import { theme } from './theme'
+import { theme } from '../styles/theme'
 
 const GlobalStyle = createGlobalStyle`
-  ${normalize}
-
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
 
   body { 
     font-family: 'Manrope', sans-serif;
@@ -28,19 +20,9 @@ const GlobalStyle = createGlobalStyle`
     &::-webkit-scrollbar-thumb{
       background-color: ${theme.color.background.orange.primary};    
       border-radius: 20px;       
-      border: 3px solid ${theme.color.background.neutral.primary};  
+      border: 3.5px solid ${theme.color.background.neutral.primary};  
     }
   }
-
-  button {
-    border:none;
-    background-image:none;
-    background-color:transparent;
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
-  }
-
 
 `
 export { GlobalStyle }

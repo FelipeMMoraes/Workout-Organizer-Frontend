@@ -26,7 +26,9 @@ const variantWeight = (theme: DefaultTheme, variant: WeightVariant) =>
     regular: css`
       font-weight: ${theme.font.weight.regular};
     `,
-    medium: css``,
+    medium: css`
+      font-weight: ${theme.font.weight.medium};
+    `,
     bold: css`
       font-weight: ${theme.font.weight.bold};
     `

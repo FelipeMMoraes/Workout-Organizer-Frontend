@@ -7,7 +7,7 @@ const Banner = ({ children, title, bgImage }: BannerProps) => (
     <S.TextContainer>
       <Typography
         tag="h1"
-        size="headingLg"
+        size="headingMd"
         weight="bold"
         color="neutralInverted"
       >

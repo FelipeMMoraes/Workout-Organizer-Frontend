@@ -15,8 +15,11 @@ const BannerContainer = styled.div`
 `
 
 const TextContainer = styled.div`
-  max-width: 400px;
-  padding: 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  max-width: 306px;
+  padding: 30px;
 `
 
 const BackgroundContainer = styled.div<BackgroundContainerProps>`
