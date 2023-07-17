@@ -13,6 +13,10 @@ const Container = styled.div`
   position: fixed;
   left: 0;
   top: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 `
 
 const LineBelow = styled.div`
@@ -20,7 +24,7 @@ const LineBelow = styled.div`
     content: '';
     position: absolute;
     width: 100%;
-    height: 2px;
+    height: 1.5px;
     background-color: ${theme.color.border.weak};
     bottom: 0px;
     left: 0;
@@ -38,4 +42,36 @@ const ContainerButtons = styled.div`
   gap: 16px;
 `
 
-export { Container, ContainerButtons, ContainerLogo, LineBelow }
+const AsideTop = styled.div``
+
+const AsideBot = styled.div`
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  button {
+    background: none;
+  }
+`
+
+const LineBelow2 = styled.div`
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1.5px;
+    background-color: ${theme.color.border.weak};
+    top: 0px;
+    left: 0;
+  }
+`
+
+export {
+  AsideBot,
+  AsideTop,
+  Container,
+  ContainerButtons,
+  ContainerLogo,
+  LineBelow,
+  LineBelow2
+}
