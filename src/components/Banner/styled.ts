@@ -14,7 +14,7 @@ const BannerContainer = styled.div`
   border-radius: ${theme.border.radius.medium};
 `
 
-const TextContainer = styled.div`
+const ContentContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 5px;
@@ -35,4 +35,4 @@ const BackgroundContainer = styled.div<BackgroundContainerProps>`
   border-radius: 0 ${theme.border.radius.medium} ${theme.border.radius.medium} 0;
 `
 
-export { BackgroundContainer, BannerContainer, TextContainer }
+export { BackgroundContainer, BannerContainer, ContentContainer }
