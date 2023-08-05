@@ -1,15 +1,20 @@
-import { Header } from './components/Header'
-import { Main } from './components/Main'
-import { SideBar } from './components/SideBar'
-import { Container } from './styles/App'
+import { BrowserRouter } from 'react-router-dom'
+import { ThemeProvider } from 'styled-components'
+import { Router } from './Router'
+
+import { GlobalStyle } from './styles/GlobalStyles/globalStyles'
+import { ResetStyle } from './styles/GlobalStyles/resetStyles'
+import { theme } from './styles/theme'
 
 function App() {
   return (
-    <Container>
-      <Header></Header>
-      <SideBar></SideBar>
-      <Main></Main>
-    </Container>
+    <ThemeProvider theme={theme}>
+      <BrowserRouter>
+        <Router />
+      </BrowserRouter>
+      <ResetStyle />
+      <GlobalStyle />
+    </ThemeProvider>
   )
 }
 export default App

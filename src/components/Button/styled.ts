@@ -1,13 +1,10 @@
+import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
 import { theme } from '../../styles/theme'
 
-type NavbarLinkProps = {
-  isActive?: boolean
-}
-
 const NavbarLinkContainer = styled.div``
 
-const NavbarLink = styled.button<NavbarLinkProps>`
+const NavbarLink = styled(NavLink)`
   display: flex;
   gap: 16px;
   align-items: center;
@@ -16,6 +13,7 @@ const NavbarLink = styled.button<NavbarLinkProps>`
 
   font-size: 14px;
   font-weight: 600;
+  text-decoration: none;
 
   padding: 16px;
   border-radius: 8px;
@@ -23,15 +21,13 @@ const NavbarLink = styled.button<NavbarLinkProps>`
   text-align: left;
   cursor: pointer;
 
-  background-color: ${({ isActive }) =>
-    isActive
-      ? theme.color.background.orange.primary
-      : theme.color.background.neutral.secondary};
+  background-color: ${theme.color.background.neutral.secondary};
+  color: ${theme.color.text.neutral.default};
 
-  color: ${({ isActive }) =>
-    isActive
-      ? theme.color.text.neutral.inverted
-      : theme.color.text.neutral.default};
+  &.active {
+    background-color: ${theme.color.background.orange.primary};
+    color: ${theme.color.text.neutral.inverted};
+  }
 `
 
 export { NavbarLink, NavbarLinkContainer }

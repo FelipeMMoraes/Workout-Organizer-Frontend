@@ -24,12 +24,15 @@ const variantStyles = (theme: DefaultTheme, variant: TagVariant) =>
 const variantWeight = (theme: DefaultTheme, variant: WeightVariant) =>
   ({
     regular: css`
+      /* 400 */
       font-weight: ${theme.font.weight.regular};
     `,
     medium: css`
+      /* 500 */
       font-weight: ${theme.font.weight.medium};
     `,
     bold: css`
+      /* 700 */
       font-weight: ${theme.font.weight.bold};
     `
   })[variant]
@@ -61,9 +64,7 @@ const variantSize = (theme: DefaultTheme, variant: SizeVariant) =>
     headingMd: css`
       font-size: ${theme.font.size.m7};
     `,
-    headingLg: css`
-      /* font-size: ${theme.font.size.m7}; */
-    `,
+    headingLg: css``,
     bodySm: css`
       font-size: ${theme.font.size.m1};
     `,
@@ -78,7 +79,9 @@ const variantSize = (theme: DefaultTheme, variant: SizeVariant) =>
     `
   })[variant]
 
+// Criando o componente estilizado "DynamicTypography"
 export const DynamicTypography = styled(
+  // Utilizando a função createElement para renderizar a tag definida na prop "tag"
   ({ tag, children, ...props }: DynamicTypographyProps) =>
     createElement(tag, props, children)
 )`

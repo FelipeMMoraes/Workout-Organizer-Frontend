@@ -5,6 +5,7 @@ type ButtonProps = {
   children: ReactNode
   isActive?: boolean
   icon?: IconType
+  to?: string
 }
 
 export type { ButtonProps }

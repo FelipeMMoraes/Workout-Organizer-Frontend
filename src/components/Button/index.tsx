@@ -2,9 +2,9 @@ import * as S from './styled'
 
 import type { ButtonProps } from './types'
 
-const Button = ({ children, isActive = false, icon: Icon }: ButtonProps) => (
+const Button = ({ children, icon: Icon, to }: ButtonProps) => (
   <S.NavbarLinkContainer>
-    <S.NavbarLink isActive={isActive}>
+    <S.NavbarLink to={to}>
       {Icon && <Icon size={24} />}
       {children}
     </S.NavbarLink>
