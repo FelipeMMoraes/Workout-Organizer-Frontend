@@ -2,7 +2,7 @@ import * as S from './styled'
 
 import type { ButtonProps } from './types'
 
-const Button = ({ children, icon: Icon, to }: ButtonProps) => (
+const ButtonAside = ({ children, icon: Icon, to }: ButtonProps) => (
   <S.NavbarLinkContainer>
     <S.NavbarLink to={to}>
       {Icon && <Icon size={24} />}
@@ -11,4 +11,4 @@ const Button = ({ children, icon: Icon, to }: ButtonProps) => (
   </S.NavbarLinkContainer>
 )
 
-export { Button }
+export { ButtonAside }

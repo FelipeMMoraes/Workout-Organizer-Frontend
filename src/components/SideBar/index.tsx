@@ -1,4 +1,3 @@
-import { Button } from '../Button'
 import { Logo } from '../Logo'
 
 import { AiFillAppstore } from 'react-icons/ai'
@@ -13,6 +12,7 @@ import {
 
 import { BsCalendarWeek } from 'react-icons/bs'
 
+import { ButtonAside } from '../Button'
 import * as S from './styled'
 
 const SideBar = () => {
@@ -25,36 +25,39 @@ const SideBar = () => {
         </S.ContainerLogo>
 
         <S.ContainerButtons>
-          <Button to={'/'} icon={AiFillAppstore}>
+          <ButtonAside to={'/'} icon={AiFillAppstore}>
             Overview
-          </Button>
+          </ButtonAside>
 
-          <Button to={'/workout'} icon={BiDumbbell}>
+          <ButtonAside to={'/workout'} icon={BiDumbbell}>
             Workout
-          </Button>
+          </ButtonAside>
 
-          <Button to={'/dietplan'} icon={BiNotepad}>
+          <ButtonAside to={'/dietplan'} icon={BiNotepad}>
             Diet Plan
-          </Button>
-          <Button to={'/goals'} icon={BiMedal}>
+          </ButtonAside>
+
+          <ButtonAside to={'/goals'} icon={BiMedal}>
             Goals
-          </Button>
-          <Button to={'/schedule'} icon={BsCalendarWeek}>
+          </ButtonAside>
+
+          <ButtonAside to={'/schedule'} icon={BsCalendarWeek}>
             My Schedule
-          </Button>
-          <Button to={'/progress'} icon={BiSolidBarChartAlt2}>
+          </ButtonAside>
+
+          <ButtonAside to={'/progress'} icon={BiSolidBarChartAlt2}>
             Progress
-          </Button>
+          </ButtonAside>
         </S.ContainerButtons>
       </S.AsideTop>
       <S.AsideBot>
         <S.LineBelow2 />
-        <Button to={'/help'} icon={BiHelpCircle}>
+        <ButtonAside to={'/help'} icon={BiHelpCircle}>
           Help
-        </Button>
-        <Button to={'/logout'} icon={BiLogOut}>
+        </ButtonAside>
+        <ButtonAside to={'/logout'} icon={BiLogOut}>
           Logout
-        </Button>
+        </ButtonAside>
       </S.AsideBot>
     </S.Container>
   )

@@ -48,10 +48,7 @@ const AsideBot = styled.div`
   display: flex;
   flex-direction: column;
   position: relative;
-
-  button {
-    background: none;
-  }
+  gap: 16px;
 `
 
 const LineBelow2 = styled.div`

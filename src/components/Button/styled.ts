@@ -21,7 +21,7 @@ const NavbarLink = styled(NavLink)`
   text-align: left;
   cursor: pointer;
 
-  background-color: ${theme.color.background.neutral.secondary};
+  background-color: ${theme.color.background.neutral.primary};
   color: ${theme.color.text.neutral.default};
 
   &.active {

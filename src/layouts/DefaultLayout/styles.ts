@@ -12,4 +12,5 @@ export const LayoutContainer = styled.div`
 
 export const OutletContainer = styled.div`
   grid-area: main;
+  padding: 32px;
 `
