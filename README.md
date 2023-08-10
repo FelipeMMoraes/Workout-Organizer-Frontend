@@ -15,11 +15,20 @@
 ## :file_folder: Projeto
 <p align="center">O projeto Workout Organizer é uma aplicação de organizador de treinos, você poderá listar todos os seu treinos, series, repetições e o peso, adicionar novos exercicios, ver o historico de treino, e os futuros treinos que você irá fazer</p>
 
-## :pushpin: Estrutura
-
-
 ## :computer: Tecnologias
 <p>Nesse projeto estamos utilizando <strong>ReactJS</strong>, <strong>TypeScript</strong>,para estilização foi utilizado <strong>StyledComponents</strong>, algumas bibliotecas como <strong>date-fns</strong>, <strong>React Icons</strong></p>
+
+## 🔧 How to run
+
+- Download this project to your computer or use the git command `git clone https://github.com/FelipeMMoraes/Workout-Organizer-Frontend.git`
+- Open the folder todo-list-ignite in your system's shell
+- Run `$ yarn install` to install the project's modules
+
+### Webpage
+
+- Open the folder todo-list-ignite in a terminal tab
+- Run `$ yarn dev`
+
 
 ## :memo: Licença
 
