@@ -18,7 +18,7 @@
 ## :computer: Tecnologias
 <p>Nesse projeto estamos utilizando <strong>ReactJS</strong>, <strong>TypeScript</strong>,para estilização foi utilizado <strong>StyledComponents</strong>, algumas bibliotecas como <strong>date-fns</strong>, <strong>React Icons</strong></p>
 
-##🔧 Como Rodar o Projeto
+## 🔧 Como Rodar o Projeto
 
 - Download this project to your computer or use the git command `git clone https://github.com/FelipeMMoraes/Workout-Organizer-Frontend.git`
 - Open the folder Workout-Organizer-Frontend in your system's shell
@@ -26,7 +26,7 @@
 
 ### Webpage
 
-- Open the folder todo-list-ignite in a terminal tab
+- Open the folder Workout-Organizer-Frontend in a terminal tab
 - Run `$ yarn dev`
 
 
