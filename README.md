@@ -19,7 +19,7 @@
 
 
 ## :computer: Tecnologias
-
+<p>Nesse projeto estamos utilizando <strong>ReactJS</strong>, <strong>TypeScript</strong>,para estilização foi utilizado <strong>StyledComponents</strong>, algumas bibliotecas como <strong>date-fns</strong>, <strong>React Icons</strong></p>
 
 ## :memo: Licença
 
