@@ -1,9 +1,27 @@
+import { Typography } from '../Typography'
 import * as S from './styled'
 import type { BannerProps } from './types'
 
-const Banner = ({ children, bgImage }: BannerProps) => (
+const Banner = ({ bgImage, title, text }: BannerProps) => (
   <S.BannerContainer>
-    <S.ContentContainer>{children}</S.ContentContainer>
+    <S.ContentContainer>
+      <Typography
+        tag="h1"
+        size="headingMd"
+        weight="bold"
+        color="neutralInverted"
+      >
+        {title}
+      </Typography>
+      <Typography
+        tag="p"
+        size="bodyMd"
+        weight="regular"
+        color="neutralInverted"
+      >
+        {text}
+      </Typography>
+    </S.ContentContainer>
     <S.BackgroundContainer bgImage={bgImage} />
   </S.BannerContainer>
 )

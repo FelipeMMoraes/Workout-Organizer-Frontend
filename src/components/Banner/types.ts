@@ -1,8 +1,7 @@
-import { ReactNode } from 'react'
-
 type BannerProps = {
-  children: ReactNode
   bgImage: string
+  title: string
+  text: string
 }
 
 export type { BannerProps }
