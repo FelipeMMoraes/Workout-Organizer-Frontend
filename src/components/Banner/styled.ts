@@ -12,6 +12,38 @@ const BannerContainer = styled.div`
   height: auto;
 
   border-radius: ${theme.border.radius.medium};
+
+  position: relative;
+
+  overflow: hidden;
+
+  &::before {
+    position: absolute;
+
+    content: '';
+    background-color: rgba(255, 167, 121, 0.2);
+    width: 145px;
+    height: 145px;
+    border-radius: ${theme.border.radius.circle};
+
+    bottom: -35px;
+    left: -35px;
+  }
+
+  &::after {
+    position: absolute;
+
+    content: '';
+    background-color: rgba(255, 167, 121, 0.2);
+    width: 67px;
+    height: 67px;
+    border-radius: ${theme.border.radius.circle};
+
+    bottom: -17px;
+    left: -17px;
+
+    z-index: 2;
+  }
 `
 
 const ContentContainer = styled.div`
