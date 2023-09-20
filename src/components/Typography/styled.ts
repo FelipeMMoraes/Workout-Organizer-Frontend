@@ -4,6 +4,7 @@ import styled, { DefaultTheme, css } from 'styled-components'
 import {
   ColorVariant,
   DynamicTypographyProps,
+  LineVariant,
   SizeVariant,
   TagVariant,
   WeightVariant
@@ -34,6 +35,28 @@ const variantWeight = (theme: DefaultTheme, variant: WeightVariant) =>
     bold: css`
       /* 700 */
       font-weight: ${theme.font.weight.bold};
+    `
+  })[variant]
+
+const variantLine = (theme: DefaultTheme, variant: LineVariant) =>
+  ({
+    none: css`
+      line-height: ${theme.font.lineHeight.none};
+    `,
+    micro: css`
+      line-height: ${theme.font.lineHeight.micro};
+    `,
+    tiny: css`
+      line-height: ${theme.font.lineHeight.tiny};
+    `,
+    small: css`
+      line-height: ${theme.font.lineHeight.small};
+    `,
+    medium: css`
+      line-height: ${theme.font.lineHeight.medium};
+    `,
+    large: css`
+      line-height: ${theme.font.lineHeight.large};
     `
   })[variant]
 
@@ -85,10 +108,11 @@ export const DynamicTypography = styled(
   ({ tag, children, ...props }: DynamicTypographyProps) =>
     createElement(tag, props, children)
 )`
-  ${({ theme, tag, weight, color, size }) => css`
+  ${({ theme, tag, weight, color, size, line }) => css`
     ${variantStyles(theme, tag)};
     ${variantWeight(theme, weight)};
     ${variantColor(theme, color)};
+    ${variantLine(theme, line)};
     ${size && variantSize(theme, size)};
   `};
 `

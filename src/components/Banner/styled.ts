@@ -18,7 +18,6 @@ const ContentContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 5px;
-  max-width: 306px;
   padding: 30px;
 `
 

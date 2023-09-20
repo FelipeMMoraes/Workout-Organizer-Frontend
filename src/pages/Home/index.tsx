@@ -6,11 +6,10 @@ import ImgBanner from '../../assets/img/Banner1.png'
 export function Home() {
   return (
     <>
-      <h1>Overview oi oi</h1>
       <Banner
         bgImage={ImgBanner}
-        title="Plan Your Diet Plan This Week"
-        text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur eligendi itaque quaerat voluptas quidem minus nihil quasi alias, officia delectus, recusandae rerum eum ea, iure non exercitationem temporibus nisi dicta."
+        title="Planeje seu plano de dieta esta semana"
+        text="O caminho para uma vida mais saudável começa com um planejamento cuidadoso. Não há momento melhor do que agora para começar a moldar sua jornada de bem-estar. Com nosso aplicativo, você pode planejar sua dieta para a semana inteira com facilidade. Personalize suas refeições, defina metas realistas e acompanhe seu progresso. Junte-se a nós nessa jornada de transformação pessoal e conquiste uma vida mais saudável, um passo de cada vez!"
       ></Banner>
       <Card
         imageUrl="https://monkeybuzz.com.br/wp-content/uploads/2016/06/alex-turner-5775125610f7c-768x510.jpg"

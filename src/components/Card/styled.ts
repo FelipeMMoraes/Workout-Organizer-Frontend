@@ -5,12 +5,44 @@ const CardContainer = styled.div`
   display: flex;
   flex-direction: column;
 
-  background-color: ${theme.color.background.purple.primary};
+  background: linear-gradient(150deg, #7c6dd7 4.71%, #c4baff 110.44%);
   width: 100%;
   max-width: 380px;
 
   border-radius: ${theme.border.radius.medium};
   padding: 26px;
+
+  position: relative;
+
+  overflow: hidden;
+
+  &::before {
+    position: absolute;
+
+    content: '';
+    background-color: rgba(124, 109, 215, 0.5);
+    width: 145px;
+    height: 145px;
+    border-radius: ${theme.border.radius.circle};
+
+    top: -35px;
+    right: -35px;
+  }
+
+  &::after {
+    position: absolute;
+
+    content: '';
+    background-color: rgba(124, 109, 215);
+    width: 67px;
+    height: 67px;
+    border-radius: ${theme.border.radius.circle};
+
+    top: -17px;
+    right: -17px;
+
+    z-index: 2;
+  }
 `
 
 const CardHeader = styled.div`

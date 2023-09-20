@@ -24,6 +24,8 @@ type SizeVariant =
   | 'bodyLg'
   | 'base'
 
+type LineVariant = 'large' | 'medium' | 'small' | 'tiny' | 'micro' | 'none'
+
 // Interface que representa as props do componente Typography
 type TypographyProps = {
   tag?: TagVariant
@@ -31,6 +33,7 @@ type TypographyProps = {
   weight?: WeightVariant
   color?: ColorVariant
   size?: SizeVariant
+  line?: LineVariant
 }
 
 type DynamicTypographyProps = {
@@ -39,11 +42,13 @@ type DynamicTypographyProps = {
   weight: WeightVariant
   color: ColorVariant
   size?: SizeVariant
+  line: LineVariant
 }
 
 export type {
   ColorVariant,
   DynamicTypographyProps,
+  LineVariant,
   SizeVariant,
   TagVariant,
   TypographyProps,
