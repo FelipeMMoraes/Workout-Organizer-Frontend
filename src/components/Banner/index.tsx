@@ -18,6 +18,7 @@ const Banner = ({ bgImage, title, text }: BannerProps) => (
         size="bodyMd"
         weight="regular"
         color="neutralInverted"
+        line="medium"
       >
         {text}
       </Typography>

@@ -1,9 +1,16 @@
-const SearchBar = () => {
+import { FaSearch } from 'react-icons/fa'
+
+import * as S from './styled'
+import { SearchBarProps } from './types'
+
+const SearchBar = ({ placeholder }: SearchBarProps) => {
   return (
-    <>
-      <label htmlFor=""></label>
-      <input type="text" />
-    </>
+    <S.SearchBarWrapper>
+      <S.SearchIcon>
+        <FaSearch />
+      </S.SearchIcon>
+      <S.SearchInput type="text" placeholder={placeholder} />
+    </S.SearchBarWrapper>
   )
 }
 

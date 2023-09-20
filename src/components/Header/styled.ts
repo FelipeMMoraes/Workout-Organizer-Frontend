@@ -4,15 +4,17 @@ import styled from 'styled-components'
 import { theme } from '../../styles/theme'
 
 const Container = styled.header`
-  background-color: ${theme.color.background.neutral.primary};
+  grid-area: header;
+
   padding: 24px 32px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+
+  background-color: ${theme.color.background.neutral.primary};
 
   border-bottom: ${theme.border.width.thin} ${theme.border.style.solid};
   border-color: ${theme.color.border.weak};
-
-  grid-area: header;
 
   position: fixed;
   right: 0;
@@ -42,7 +44,9 @@ const FaGearCustom = styled(FaGear)`
   }
 `
 
-const Right = styled.div``
+const Right = styled.div`
+  display: flex;
+`
 
 const IconsHeader = styled.div`
   align-items: center;
@@ -62,7 +66,10 @@ const Avatar = styled.img`
   border-style: solid;
 `
 
-const SearchBar = styled.div``
+const SearchBarWrapper = styled.div`
+  width: 100%;
+  max-width: 600px;
+`
 
 export {
   Avatar,
@@ -72,5 +79,5 @@ export {
   IconsHeader,
   Left,
   Right,
-  SearchBar
+  SearchBarWrapper
 }

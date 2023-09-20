@@ -6,7 +6,7 @@ const Typography = ({
   children,
   weight = 'medium',
   color = 'orangeDefault',
-  line,
+  line = 'none',
   size
 }: TypographyProps) => (
   <S.DynamicTypography

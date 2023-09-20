@@ -41,8 +41,8 @@ type DynamicTypographyProps = {
   children: ReactNode
   weight: WeightVariant
   color: ColorVariant
-  size?: SizeVariant
   line: LineVariant
+  size?: SizeVariant
 }
 
 export type {

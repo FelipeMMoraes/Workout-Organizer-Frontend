@@ -32,7 +32,7 @@ const LineBelow = styled.div`
 `
 const ContainerLogo = styled.div`
   position: relative;
-  padding-bottom: 30px;
+  padding-bottom: 42px;
 `
 
 const ContainerButtons = styled.div`

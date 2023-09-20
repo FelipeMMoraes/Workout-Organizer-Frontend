@@ -1,3 +1,4 @@
+import { SearchBar } from '../SearchBar'
 import { Typography } from '../Typography'
 import * as S from './styled'
 
@@ -17,9 +18,11 @@ const Header = () => (
       </Typography>
     </S.Left>
 
-    <S.Right>
-      <S.SearchBar></S.SearchBar>
+    <S.SearchBarWrapper>
+      <SearchBar placeholder="Search" />
+    </S.SearchBarWrapper>
 
+    <S.Right>
       <S.IconsHeader>
         <button>
           <S.FaBellCustom size={24} />

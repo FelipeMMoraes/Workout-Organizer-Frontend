@@ -3,9 +3,11 @@ import { Card } from '../../components/Card'
 
 import ImgBanner from '../../assets/img/Banner1.png'
 
+import * as S from './styles'
+
 export function Home() {
   return (
-    <>
+    <S.Home>
       <Banner
         bgImage={ImgBanner}
         title="Planeje seu plano de dieta esta semana"
@@ -19,6 +21,6 @@ export function Home() {
         dificulty="Begginer"
         workout="Lower Body"
       ></Card>
-    </>
+    </S.Home>
   )
 }
