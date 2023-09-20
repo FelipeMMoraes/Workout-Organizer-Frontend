@@ -13,8 +13,8 @@ export function Home() {
         text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur eligendi itaque quaerat voluptas quidem minus nihil quasi alias, officia delectus, recusandae rerum eum ea, iure non exercitationem temporibus nisi dicta."
       ></Banner>
       <Card
-        imageUrl="https://github.com/FelipeMMoraes.png"
-        title="Felipe Moraes"
+        imageUrl="https://monkeybuzz.com.br/wp-content/uploads/2016/06/alex-turner-5775125610f7c-768x510.jpg"
+        title="Alex Turner"
         subtitle="Fitness Trainer"
         exercise="Legs"
         dificulty="Begginer"
