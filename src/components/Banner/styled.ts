@@ -49,7 +49,7 @@ const BannerContainer = styled.div`
 const ContentContainer = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 15px;
   padding: 30px;
 `
 
