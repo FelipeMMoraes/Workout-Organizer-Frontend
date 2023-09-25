@@ -1,8 +1,11 @@
-import { FormEvent, useEffect, useState } from 'react'
+import { FormEvent, useContext, useEffect, useState } from 'react'
 import { Typography } from '../../components/Typography'
 import WorkoutTable from './components/WorkoutTable'
 
 import * as S from './styles'
+import { PropsWorkout } from './types'
+
+import WorkoutsContext from '../../context/workouts'
 
 function Workout() {
   const INITIAL_STATE = {
@@ -20,6 +23,8 @@ function Workout() {
     | React.ChangeEvent<HTMLInputElement>
     | React.ChangeEvent<HTMLSelectElement>
 
+  const { workouts, setWorkouts } = useContext(WorkoutsContext)
+
   const handleChange = (e: HandleChangeTypes) => {
     const { name, value } = e.target
 
@@ -32,28 +37,16 @@ function Workout() {
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
 
-    const localStorageData = localStorage.getItem('@WorkoutOrganizer')
-    const checkLocalStorage = localStorageData ?? '[]'
-    const exercisesArray = JSON.parse(checkLocalStorage)
-
-    const newStorageItems = [...exercisesArray, exerciseInfo]
-
-    // exercisesArray.push(exerciseInfo)
-
-    localStorage.setItem('@WorkoutOrganizer', JSON.stringify(newStorageItems))
-
-    setSavedTreinos(newStorageItems)
+    const newWorkouts = [...workouts, exerciseInfo] as PropsWorkout[]
+    localStorage.setItem('@WorkoutOrganizer', JSON.stringify(newWorkouts))
+    setWorkouts(newWorkouts)
   }
 
-  const [savedTreinos, setSavedTreinos] = useState([])
-
   useEffect(() => {
-    // Quando o componente montar, carregue os treinos salvos do Local Storage
     const localStorageData = localStorage.getItem('@WorkoutOrganizer')
     const checkLocalStorage = localStorageData ?? '[]'
     const exercisesArray = JSON.parse(checkLocalStorage)
-
-    setSavedTreinos(exercisesArray)
+    setWorkouts(exercisesArray)
   }, [])
 
   return (
@@ -121,7 +114,7 @@ function Workout() {
       </S.ContainerForm>
 
       <S.TableContainer>
-        <WorkoutTable treinos={savedTreinos} />
+        <WorkoutTable />
       </S.TableContainer>
     </S.WorkoutContainer>
   )
