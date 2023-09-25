@@ -1,21 +1,40 @@
 import { useContext, useEffect, useState } from 'react'
-import WorkoutsContext from '../../../context/workouts'
-import { PropsWorkout } from '../types'
+import WorkoutsContext from '../../../../context/workouts'
+import { PropsWorkout } from '../../types'
+
+import * as S from './styles'
 
 function WorkoutTable() {
-  const [treinos, setTreinos] = useState<PropsWorkout[]>([])
   const { workouts } = useContext(WorkoutsContext)
 
+  const [treinos, setTreinos] = useState<PropsWorkout[]>([])
+  const [filteredWorkout, setfilteredWorkout] = useState('MostrarTodos')
+
   useEffect(() => {
-    const getWorkouts = () => {
+    if (filteredWorkout === 'MostrarTodos') {
       setTreinos(workouts)
+    } else {
+      const filteredWorkouts = workouts.filter(
+        (treino) => treino.treino === filteredWorkout
+      )
+      setTreinos(filteredWorkouts)
     }
-    getWorkouts()
-  }, [])
+  }, [filteredWorkout, workouts])
 
   return (
-    <div>
+    <S.TableContainer>
       <h2>Treinos Salvos</h2>
+
+      <select
+        onChange={(e) => setfilteredWorkout(e.target.value)}
+        value={filteredWorkout}
+      >
+        <option value="MostrarTodos">Mostrar Todos</option>
+        <option value="A">A</option>
+        <option value="B">B</option>
+        <option value="C">C</option>
+      </select>
+
       <table>
         <thead>
           <tr>
@@ -40,7 +59,7 @@ function WorkoutTable() {
           ))}
         </tbody>
       </table>
-    </div>
+    </S.TableContainer>
   )
 }
 

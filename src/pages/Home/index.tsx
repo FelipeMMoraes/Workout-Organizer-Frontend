@@ -3,6 +3,7 @@ import { Card } from '../../components/Card'
 
 import ImgBanner from '../../assets/img/Banner1.png'
 
+import WorkoutTable from '../Workout/components/WorkoutTable'
 import * as S from './styles'
 
 export function Home() {
@@ -21,6 +22,8 @@ export function Home() {
         dificulty="Begginer"
         workout="Lower Body"
       ></Card>
+
+      <WorkoutTable />
     </S.Home>
   )
 }
