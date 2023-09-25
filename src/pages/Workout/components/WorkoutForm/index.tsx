@@ -1,6 +1,6 @@
 import { FormEvent, useContext, useEffect, useState } from 'react'
 import { Typography } from '../../../../components/Typography'
-import WorkoutsContext from '../../../../context/workouts'
+import { WorkoutsContext } from '../../../../context/workouts'
 import { PropsWorkout } from '../../types'
 import * as S from './styles'
 
@@ -51,24 +51,32 @@ export function WorkoutForm() {
     <S.ContainerForm>
       <form onSubmit={(e) => handleSubmit(e)}>
         <label>
+          <Typography>Treino:</Typography>
           <select name="treino" onChange={(e) => handleChange(e)}>
             <option defaultValue={'A'} value="A">
               A
             </option>
             <option value="B">B</option>
             <option value="C">C</option>
+            <option value="D">D</option>
+            <option value="E">E</option>
           </select>
         </label>
         <label>
+          <Typography>Grupo Muscular:</Typography>
           <select name="grupoMuscular" onChange={(e) => handleChange(e)}>
             <option defaultValue={'peito'} value="peito">
-              Peito
+              Peito:
             </option>
-            <option value="biceps">Biceps</option>
+            <option value="biceps">Bíceps:</option>
+            <option value="triceps">Tríceps:</option>
+            <option value="deltoides">Deltoides:</option>
+            <option value="dorcais">Dorçais:</option>
+            <option value="pernas">Pernas:</option>
           </select>
         </label>
         <label htmlFor="workoutName">
-          <Typography>Nome do treino</Typography>
+          <Typography>Nome do treino:</Typography>
           <input
             onChange={(e) => handleChange(e)}
             type="text"
@@ -77,12 +85,13 @@ export function WorkoutForm() {
           />
         </label>
         <label htmlFor="workoutName">
-          <Typography>Repeticoes</Typography>
+          <Typography>Repeticoes:</Typography>
           <input
             onChange={(e) => handleChange(e)}
             type="number"
             name="repeticoes"
             id="workoutName"
+            min={1}
           />
         </label>
         <label htmlFor="workoutName">
@@ -92,6 +101,7 @@ export function WorkoutForm() {
             type="number"
             name="series"
             id="workoutName"
+            min={1}
           />
         </label>
         <label htmlFor="workoutName">
@@ -101,6 +111,7 @@ export function WorkoutForm() {
             type="number"
             name="carga"
             id="workoutName"
+            min={1}
           />
         </label>
 

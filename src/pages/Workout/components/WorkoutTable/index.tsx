@@ -1,5 +1,6 @@
 import { useContext, useEffect, useState } from 'react'
-import WorkoutsContext from '../../../../context/workouts'
+import { Typography } from '../../../../components/Typography'
+import { WorkoutsContext } from '../../../../context/workouts'
 import { PropsWorkout } from '../../types'
 
 import * as S from './styles'
@@ -23,7 +24,9 @@ function WorkoutTable() {
 
   return (
     <S.TableContainer>
-      <h2>Treinos Salvos</h2>
+      <Typography tag="h2" weight="bold" size="headingMd">
+        Treinos Salvos
+      </Typography>
 
       <select
         onChange={(e) => setfilteredWorkout(e.target.value)}
@@ -33,6 +36,8 @@ function WorkoutTable() {
         <option value="A">A</option>
         <option value="B">B</option>
         <option value="C">C</option>
+        <option value="D">D</option>
+        <option value="E">E</option>
       </select>
 
       <table>

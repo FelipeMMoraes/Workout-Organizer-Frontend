@@ -7,7 +7,9 @@ import * as S from './styles'
 function Workout() {
   return (
     <S.WorkoutContainer>
-      <Typography>Crie seu novo Treino</Typography>
+      <Typography tag="h1" weight="bold" size="headingMd">
+        Crie seu novo Treino
+      </Typography>
 
       <WorkoutForm />
 

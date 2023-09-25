@@ -17,6 +17,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  z-index: 999;
 `
 
 const LineBelow = styled.div`

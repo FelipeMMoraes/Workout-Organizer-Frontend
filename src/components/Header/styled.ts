@@ -19,6 +19,7 @@ const Container = styled.header`
   position: fixed;
   right: 0;
   width: calc(100vw - 230px);
+  z-index: 998;
 `
 
 const Left = styled.div`

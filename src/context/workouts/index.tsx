@@ -10,12 +10,11 @@ type PropsWorkoutContext = {
   workouts: PropsWorkout[]
   setWorkouts: React.Dispatch<React.SetStateAction<PropsWorkout[]>>
 }
-
-const WorkoutsContext = createContext<PropsWorkoutContext>(DEFAULT_VALUE)
-
 type PropsWorkoutProvider = {
   children: ReactNode
 }
+
+const WorkoutsContext = createContext<PropsWorkoutContext>(DEFAULT_VALUE)
 
 function WorkoutsProvider({ children }: PropsWorkoutProvider) {
   const [workouts, setWorkouts] = useState<PropsWorkout[]>(
@@ -34,5 +33,4 @@ function WorkoutsProvider({ children }: PropsWorkoutProvider) {
   )
 }
 
-export default WorkoutsContext
-export { WorkoutsProvider }
+export { WorkoutsContext, WorkoutsProvider }
